@@ -21,3 +21,8 @@ body, html{
     position: absolute;
     right: 0;
 }
+
+.button-send{
+    margin-top: 10px;
+    width: 100px;
+}

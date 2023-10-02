@@ -20,7 +20,7 @@ class FormSystemParamets(ModelForm):
             'number_plot': 'Номер участка',
             'number_equipment': 'Номер оборудования', 
             'number_node': 'Номер узла',
-            'name': 'Ваше имя',
+            'name': 'Наименование',
             'date_of_repair': 'Дата ремонта',
             'replaced_parts': 'Замененные детали',
             'next_replacement_date': 'Дата следующей замены'
