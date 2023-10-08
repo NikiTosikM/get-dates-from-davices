@@ -14,11 +14,14 @@
             {% csrf_token %}
             {% for fiels in form %}
                 <div class="fields">
-                    {{ fiels.label_tag}}
+                    <span class="name_field">{{ fiels.label_tag}}</span>
                     {{ fiels}}
                 </div>
             {% endfor %}
-            <input class="button-send" type="submit">
+            <div class="block-buttons">
+                <input class="button-send" type="submit" value="Записать">  <!-- добавить данные в бд -->
+                <input class="button-show" type="submit" value="Показать">  <!-- показать данные о устройстве-->
+            </div>
         </div>
     </form>
 </body>

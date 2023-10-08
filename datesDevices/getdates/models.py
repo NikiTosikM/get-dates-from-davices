@@ -9,3 +9,6 @@ class SystemParamets(models.Model):
     date_of_repair = models.IntegerField(default= None)
     replaced_parts = models.CharField(max_length=255)
     next_replacement_date = models.IntegerField(default= None)
+
+    def __str__(self) -> str:
+        return self.name
