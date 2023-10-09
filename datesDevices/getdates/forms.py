@@ -9,7 +9,7 @@ class FormSystemParamets(ModelForm):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             if field_name != 'id':
-                field.widget.attrs.update({'class': 'input_field'})
+                field.widget.attrs['class'] = 'input_field'
 
     class Meta:
         model = SystemParamets
