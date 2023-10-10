@@ -7,24 +7,19 @@ def getMainPage(request):
         
         form = FormSystemParamets(request.POST)
 
-
         if form.is_valid():
 
-            user_dates = form.cleaned_data
+            if 'functionality check' in request.POST.keys():
+                form = FormSystemParamets(request.POST)
 
-            search_user_dates = {}
+                return render(request, 'getdates/main site page.html', context={'form': form})
 
-            for name_field, field in user_dates.items():
-                search_user_dates[name_field] = field
+            else:
+                form.save()
 
-            print(search_user_dates, 'все ок')
+                form = FormSystemParamets()
 
-            
-
-            form.save()
-            form = FormSystemParamets()
-
-            return render(request, 'getdates\main site page.html', context={'form': form})
+                return render(request, 'getdates\main site page.html', context={'form': form})
 
     else:
         form = FormSystemParamets()
